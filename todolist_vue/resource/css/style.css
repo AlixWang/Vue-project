@@ -1,0 +1,335 @@
+@charset 'UTF-8';
+/* reset the browser style */
+body,input,button,div,header,ul,li{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+button{
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+body{
+    background-color: #edf0f1;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #24B99A;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 15px;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(44, 62, 80, 0.15);
+}
+
+header input{
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: rgba(255,255,255,0.4);
+    box-shadow: 0 1px 2px rgba(44,62,80,0.1);
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance:none;
+    outline: none;
+    padding-left: 25px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family:'Regencie9e85d4a8618a70';
+    font-weight: 700;
+}
+
+header input::-webkit-input-placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}
+header input:-ws-input-placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}header input::-moz-placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+header .add{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #fff;
+    border: none;
+    border-radius: 50px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance:none;
+    cursor: pointer;
+    outline: none;
+}
+
+
+header .add svg{
+    width: 25px;
+    height: 25px;
+}
+header .add svg .fill{
+    fill: #24B99A;
+}
+
+.container{
+    width: 100%;
+    padding: 15px 15px 0 15px;
+}
+
+/*
+* tyle of list
+*/
+.container .pre_todo{
+    padding-bottom: 28px;
+    width: 100%;
+    float: left;
+}
+
+.container .pre_todo li{
+    list-style: none;
+    width: 100%;
+    height: 50px;
+    padding-right: 110px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(44, 62, 80, 0.1);
+    font-size: 16px;
+    font-family:'Regencie9e85d4a8618a70';
+    font-weight: 700;
+    line-height: 50px;
+    padding-left: 18px;
+    position: relative;
+    min-height: 50px;
+    float: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.container .pre_todo li:last-of-type{
+    margin-bottom: 0;
+}
+
+
+.container .pre_todo li button{
+    width: 50px;
+    height: 50px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color:#fff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    position: absolute;
+    
+}
+.container .pre_todo li .delete{
+    right: 50px;
+    
+}
+
+.container .pre_todo li .delete svg{
+    width: 25px;
+    fill: #24B99A;
+    cursor: pointer;
+    
+    
+    
+}
+.container .pre_todo li .delete:hover svg{
+    width: 25px;
+    fill: #E85556;
+}
+
+.container .pre_todo li .delete svg{
+    transition: fill 0.3s ease;
+    -webkit-transition: fill 0.3s ease;
+    -moz-transition:fill 0.3s ease;
+    -ms-transition:fill 0.3s ease;
+}
+
+
+.container .pre_todo li .complete::before{
+    content: "";
+    height: 30px;
+    width: 1px;
+    background-color: #EDF0F1;
+    display: block;
+    float: left;
+}
+
+.container .pre_todo li .complete{
+    right:0px;
+    
+}
+
+.container .pre_todo li .complete svg{
+    fill: #24B99A;
+    width: 22px;
+    border-radius: 25px;
+    border: 2px solid #24B99A;
+    cursor: pointer;
+
+}
+
+.container .pre_todo li .complete svg{
+    transition: fill 0.3s ease;
+    -webkit-transition: fill 0.3s ease;
+    -moz-transition:fill 0.3s ease;
+    -ms-transition:fill 0.3s ease;
+}
+
+.container .pre_todo li .complete:hover svg{
+    fill: #fff;
+    width: 22px;
+    background-color:#24B99A; 
+    border-radius: 25px;
+    border: 2px solid #24B99A;
+}
+
+.line_dist{
+    margin-bottom: 28px;
+    clear: both;
+    content: '';
+    float: left;
+    display: block;
+    width: 50%;
+    margin-left: 25%;
+    height: 1px;
+    background-color: #D8E5E0;
+}
+
+.container .com_todo{
+    float: left;
+    width: 100%;
+}
+
+.container .com_todo li{
+    list-style: none;
+    width: 100%;
+    height: 50px;
+    padding-right: 110px;
+    background-color: #fafafa;
+    color: #888;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(44, 62, 80, 0.1);
+    font-size: 16px;
+    font-family:'Regencie9e85d4a8618a70';
+    font-weight: 700;
+    line-height: 50px;
+    padding-left: 18px;
+    position: relative;
+    min-height: 50px;
+    float: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 10px;
+    text-decoration: line-through;
+}
+
+.container .com_todo li:last-of-type{
+    margin-bottom: 0;
+}
+
+
+.container .com_todo li button{
+    width: 50px;
+    height: 50px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color:#fafafa;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    position: absolute;
+}
+.container .com_todo li .delete{
+    right: 50px;
+    cursor: pointer;
+}
+
+.container .com_todo li .delete svg{
+    width: 25px;
+    fill: #24B99A;
+    
+}
+.container .com_todo li .delete:hover svg{
+    width: 25px;
+    fill: #E85556;
+}
+
+.container .com_todo li .delete svg{
+    transition: fill 0.3s ease;
+    -webkit-transition: fill 0.3s ease;
+    -moz-transition:fill 0.3s ease;
+    -ms-transition:fill 0.3s ease;
+}
+
+
+.container .com_todo li .complete::before{
+    content: "";
+    height: 30px;
+    width: 1px;
+    background-color: #EDF0F1;
+    display: block;
+    float: left;
+}
+
+.container .com_todo li .complete{
+    right:0px;
+    cursor: pointer;
+}
+
+.container .com_todo li .complete svg{
+    fill: #fff;
+    width: 22px;
+    border-radius: 25px;
+    background-color:#24B99A; 
+    border: 2px solid #24B99A;
+
+}
+
+.container .com_todo li .complete svg{
+    transition: fill 0.3s ease;
+    -webkit-transition: fill 0.3s ease;
+    -moz-transition:fill 0.3s ease;
+    -ms-transition:fill 0.3s ease;
+}
+
+.container .com_todo li .complete:hover svg{
+    fill: #24B99A;
+    width: 22px;
+    border-radius: 25px;
+    background-color: #fff;
+    border: 2px solid #24B99A;
+}
+
+
+/*
+* initial preset for todo and complete
+*/
+
+.container .pre_todo .todo_preset{
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 0;
+}
+
+.container .com_todo .complete_preset{
+    background-color: #fff;
+    text-decoration: none;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 0;
+}
