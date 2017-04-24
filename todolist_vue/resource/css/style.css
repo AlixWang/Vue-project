@@ -315,7 +315,6 @@ header .add svg .fill{
     border: 2px solid #24B99A;
 }
 
-
 /*
 * initial preset for todo and complete
 */
@@ -332,4 +331,12 @@ header .add svg .fill{
     text-align: center;
     color: rgba(0, 0, 0, 0.5);
     padding: 0;
+}
+
+.footbar{
+    height: 60px;
+    background: #ccc;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
 }

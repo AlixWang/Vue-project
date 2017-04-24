@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@2.2.6/dist/vue.js"></script>
+    <link rel="stylesheet" href="./style/main.css">
+</head>
+
+<body>
+    <div id="app">
+        <select-comp btn-value='search' v-bind:list='list1'></select-comp>
+        <select-comp btn-value='get' v-bind:list='list2'></select-comp>
+
+    </div>
+    <script>
+        Vue.component('select-option',{
+            props:['isShow','list'],
+            template:`<div class="select-option" v-show='isShow'>
+                                        <ul>
+                                            <li v-for='item of list' v-on:click='showItem(item)'>{{ item }}</li>
+                                        </ul>
+                              </div>`,
+            methods:{
+                showItem:function(item){
+                    //console.log(item);
+                    this.$emit('changeValue',item);
+                    this.$emit('tohide');
+                }
+            }
+        })
+        new Vue({
+            el: '#app',
+            data:{
+                list1: ['北京', '上海', '深圳', '广州'],
+                list2: ['day1', 'day2', 'day3', 'day4']
+            },
+            components: {
+                'select-comp': {
+                    props: ['btnValue','list'],
+                    template: `<div class="select-main">
+                                    <div class="select-input">
+                                        <input type="text" v-model='defaultValue' v-on:click='toShow'><button class="search">{{ btnValue }}</button>
+                                    </div>
+                                    <select-option v-on:tohide='toHide' v-on:changeValue='changeInputValue' v-bind:isShow='isShow' v-bind:list='list'></select-option>
+                            </div>`,
+                    data: function () {
+                        return {
+                            isShow: false,
+                            defaultValue : ''
+                        }
+                    },
+                    methods: {
+                        toShow: function () {
+                            console.log(this.isShow);
+                            this.isShow = true;
+                        },
+                        toHide: function () {
+                            this.isShow = false;
+                        },
+                        changeInputValue:function(item){
+                            console.log(event.target);
+                            this.defaultValue = item;
+                        }
+                    }
+                }
+
+
+
+            }
+
+        })
+    </script>
+</body>
+
+</html>

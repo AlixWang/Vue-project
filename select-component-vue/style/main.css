@@ -1,0 +1,80 @@
+/* reset the default style */
+body,div,ul,li,input,button{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+*,*::after,*::before{
+    box-sizing:inherit;
+}
+
+/* define customer-selection */
+.select-main{
+    padding: 20px;
+    box-shadow: 1px 1px 2px #222;
+    font-size: 15px;
+    background:linear-gradient(90deg,#61D7A4 0%,#218359 200%);
+    width: 300px;
+}
+.select-input{
+    z-index: 2;
+    position: relative;
+}
+.select-input input{
+    width: 200px;
+    height: 30px;
+    outline: none;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    padding-left:20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.select-input input:focus{
+    border: 1px solid #3F92D2;
+}
+.select-input button{
+    width: 50px;
+    height: 30px;
+    outline: none;
+    background-color: #fff;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+    position: relative;
+    left: -50px;
+    color: #ddd;
+    line-height: 30px;
+}
+.select-input button:active{
+    background-color: #3F92D2;
+    color:#fff;
+    border: 1px solid #3F92D2;
+    
+}
+.select-option{
+    width: 200px;
+    background-color: #eee;
+    padding-top: 30px;
+    position: relative;
+    top: -30px;
+    z-index:1;
+    border-radius: 15px;
+    filter: opacity(0.6);
+    overflow: hidden;
+}
+.select-option li{
+    list-style: none;
+    padding-left: 20px;
+    margin: 5px 0;
+    color: #333;
+    cursor: pointer;
+}
+.select-option li:hover{
+    background-color: #aaa;
+}
+
