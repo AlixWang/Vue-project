@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div id="app">
+        <custome-alert v-on:hidealert="hideThis" v-show='showStatus' alert-title='this is alert window !!!'>
+        	<div slot='alertDesc'>
+        		this is new aler description 
+        	</div>
+        </custome-alert>
+    </div>
+    <script src='./js/main.js'></script>
+</body>
+
+</html>

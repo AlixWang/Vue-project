@@ -1,0 +1,147 @@
+body,div,p,span{
+	margin: 0;
+	padding: 0;
+}
+html{
+	box-sizing: border-box;
+}
+*,*:before,*:after{
+	box-sizing: inherit;
+}
+
+/*. info success */
+.remind-info-success{
+	width: 400px;
+	height: 40px;
+	background-color: #33ccab;
+	border-radius: 5px;
+}
+.remind-info-success p{
+	width: 300px;
+	display: inline-block;
+	line-height: 40px;
+	color: #fff;
+	margin-left: 10px;
+	vertical-align: text-bottom;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.remind-preicon-success{
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	background: url('../image/sucess.svg') no-repeat center center;
+	background-size: cover;
+	margin-left: 10px;
+}
+.remind-info-success .remind-beficon{
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	background: url('../image/fair.svg') no-repeat center center;
+	background-size: cover;
+	margin-left: 10px;
+}
+/* info-normal */
+.remind-info-normal{
+	width: 400px;
+	height: 40px;
+	background-color:#ccc;
+	border-radius: 5px;
+}
+.remind-info-normal p{
+	width: 300px;
+	display: inline-block;
+	line-height: 40px;
+	color: #333;
+	margin-left: 10px;
+	vertical-align: text-bottom;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.remind-preicon-normal{
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	background: url('../image/normal.svg') no-repeat center center;
+	background-size: cover;
+	margin-left: 10px;
+}
+.remind-info-normal .remind-beficon{
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	background: url('../image/fair.svg') no-repeat center center;
+	background-size: cover;
+	margin-left: 10px;
+}
+/* info-warning */
+.remind-info-warning{
+	width: 400px;
+	height: 40px;
+	background-color: #f60;
+	border-radius: 5px;
+}
+.remind-info-warning p{
+	width: 300px;
+	display: inline-block;
+	line-height: 40px;
+	color: #fff;
+	margin-left: 10px;
+	vertical-align: text-bottom;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.remind-preicon-warning{
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	background: url('../image/warning.svg') no-repeat center center;
+	background-size: cover;
+	margin-left: 10px;
+}
+.remind-info-warning .remind-beficon{
+	display:inline-block;
+	height: 30px;
+	width: 30px;
+	background: url('../image/fair.svg') no-repeat center center;
+	background-size: cover;
+	margin-left: 10px;
+}
+/* info-fail */
+.remind-info-fail{
+	width: 400px;
+	height: 40px;
+	background-color: #ff140e;
+	border-radius: 5px;
+}
+.remind-info-fail p{
+	width: 300px;
+	display: inline-block;
+	line-height: 40px;
+	color: #fff;
+	margin-left: 10px;
+	vertical-align: text-bottom;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.remind-preicon-fail{
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	background: url('../image/fair.svg') no-repeat center center;
+	background-size: cover;
+	margin-left: 10px;
+}
+.remind-info-fail .remind-beficon{
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	background: url('../image/fair.svg') no-repeat center center;
+	background-size: cover;
+	margin-left: 10px;
+}
